@@ -24,3 +24,6 @@ jobs:
             port: 21
             security: loose
             timeout: 60000
+            passive: true 
+            concurrency: 1 
+            keep-alive: true 
