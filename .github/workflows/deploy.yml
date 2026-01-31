@@ -19,7 +19,7 @@ jobs:
             server: ${{ secrets.FTP_HOST }}
             username: ${{ secrets.FTP_USER }}
             password: ${{ secrets.FTP_PASS }}
-            server-dir: /public_html/laravel-api/
+            server-dir: /public_html/portfolio-website-api/
             protocol: ftp
             port: 21
             security: loose
