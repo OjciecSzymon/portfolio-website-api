@@ -13,17 +13,17 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Deploy via FTP
+      - name: Deploy public folder only
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-            server: ${{ secrets.FTP_HOST }}
-            username: ${{ secrets.FTP_USER }}
-            password: ${{ secrets.FTP_PASS }}
-            server-dir: /public_html/laravel-api/
-            protocol: ftp
-            port: 21
-            security: loose
-            timeout: 60000
-            passive: true 
-            concurrency: 1 
-            keep-alive: true 
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASS }}
+          local-dir: public/
+          server-dir: /public_html/
+          protocol: ftp
+          port: 21
+          security: loose
+          timeout: 60000
+          passive: true
+          concurrency: 1
